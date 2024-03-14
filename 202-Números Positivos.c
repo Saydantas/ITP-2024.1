@@ -11,11 +11,12 @@ Imprima uma mensagem dizendo quantos valores positivos foram lidos.*/
 #include <stdio.h>
 
 int main() {
-    int valor, positivos = 0;
+    float valor;
+    int positivos = 0;
 
     // Lê os 6 valores
     for (int i = 0; i < 6; i++) {
-        scanf("%d", &valor);
+        scanf("%f", &valor);
 
         // Verifica se o valor é positivo e diferente de zero
         if (valor > 0) {

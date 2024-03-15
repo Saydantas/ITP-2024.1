@@ -32,22 +32,28 @@ Este valor deverá ser truncado caso necessário.*/
 
 int main() {
     int A, B, C;
-
+    
     while (1) {
+        // Leitura das medidas da casa e percentual máximo permitido
         scanf("%d %d %d", &A, &B, &C);
-
-        if (A == 0 && B == 0 && C == 0) {
+        
+        // Verifica se é o fim das entradas
+        if (A == 0 || B == 0 || C == 0) {
             break;
         }
-
+        
+        // Calcula a área da casa
         int area_casa = A * B;
-
+        
+        // Calcula a área mínima do terreno necessário
         int area_terreno_minima = (area_casa * 100) / C;
-
+        
+        // Calcula o lado do terreno
         int lado_terreno = (int)sqrt(area_terreno_minima);
-
+        
+        // Imprime o lado do terreno
         printf("%d\n", lado_terreno);
     }
-
+    
     return 0;
 }
